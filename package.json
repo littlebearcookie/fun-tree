@@ -1,9 +1,8 @@
 {
   "name": "fun-tree",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A folder tree project by vue",
   "author": "bertonhsu <wl01718290@gmail.com>",
-  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
