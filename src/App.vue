@@ -1,27 +1,41 @@
 <template>
   <div id="app">
-    <HelloWorld />
+    <FunTree :trees="trees" @childEvent="parentEvent"></FunTree>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import FunTree from "@/components/FunTree";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    FunTree,
+  },
+  data() {
+    return {
+      trees: [
+        {
+          id: "0",
+          name: "Level1",
+          icon: "my-icon",
+        },
+        { id: "1", name: "Level2", node: [{ id: "10", name: "Level3" }] },
+      ],
+    };
+  },
+  methods: {
+    parentEvent(component, methods, values) {},
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.my-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url("./assets/folder.svg");
+  background-size: 100% 100%;
 }
 </style>
