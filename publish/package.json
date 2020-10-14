@@ -1,0 +1,22 @@
+{
+  "name": "fun-tree",
+  "version": "0.0.3",
+  "description": "A folder tree project by vue",
+  "main": "dist/fun-tree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littlebearcookie/fun-tree.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "Berton <wl01718290@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/littlebearcookie/fun-tree/issues"
+  },
+  "homepage": "https://github.com/littlebearcookie/fun-tree#readme"
+}

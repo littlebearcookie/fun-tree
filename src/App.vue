@@ -1,17 +1,14 @@
 <template>
   <div id="app">
-    <FunTree :trees="trees" @childEvent="parentEvent"></FunTree>
+    <FunTree :trees="trees" @clickEvent="parentEvent"></FunTree>
   </div>
 </template>
 
 <script>
-import FunTree from "@/components/FunTree";
+// import FunTree from "@/components/FunTree";
 
 export default {
   name: "App",
-  components: {
-    FunTree,
-  },
   data() {
     return {
       trees: [
@@ -25,11 +22,11 @@ export default {
     };
   },
   methods: {
-    parentEvent(component, methods, values) {},
+    parentEvent(node, actions, values) {},
   },
 };
 </script>
-
+<style src="@/../publish/dist/fun-tree.css"></style>
 <style>
 .my-icon {
   display: inline-block;

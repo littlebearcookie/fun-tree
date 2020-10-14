@@ -44,7 +44,7 @@
           <FunTree
             v-if="mytree.node && mytree.node.length > 0"
             :trees="mytree.node"
-            @childEvent="childEvent"
+            @clickEvent="clickEvent"
           ></FunTree>
         </div>
       </div>
@@ -83,7 +83,7 @@ export default {
           }
           actions.open();
         },
-        removeChild: () => {
+        removeChildren: () => {
           this.mytrees[index].node = [];
         },
         removeNode: () => {
@@ -105,70 +105,11 @@ export default {
           this.mytrees[index].opened = false;
         },
       };
-      this.$emit("childEvent", this, actions, this.mytrees[index]);
+      this.$emit("clickEvent", this, actions, this.mytrees[index]);
     },
-    childEvent(component, methods, values) {
-      this.$emit("childEvent", component, methods, values);
+    clickEvent(component, methods, values) {
+      this.$emit("clickEvent", component, methods, values);
     },
-    // click(index, action) {
-    // const actions = this.actions(index);
-    // switch (action) {
-    //   case "addChild":
-    //     actions.addChild();
-    //     break;
-    //   case "removeChild":
-    //     actions.removeChild();
-    //     break;
-    //   case "removeNode":
-    //     actions.removeNode();
-    //     break;
-    //   case "checked":
-    //     actions.checked();
-    //     break;
-    //   case "open":
-    //     actions.open();
-    //     break;
-    //   case "close":
-    //     actions.close();
-    //     break;
-    //   default:
-    //     break;
-    // }
-    // },
-    // actions(index) {
-    //   const actions = {
-    //     addChild: () => {
-    //       if (this.mytrees[index].node) {
-    //         this.mytrees[index].node.push({ name: "node" });
-    //       } else {
-    //         this.$set(this.mytrees[index], "node", [{ name: "node" }]);
-    //       }
-    //       actions.open();
-    //     },
-    //     removeChild: () => {
-    //       this.mytrees[index].node = [];
-    //     },
-    //     removeNode: () => {
-    //       this.mytrees.splice(index, 1);
-    //     },
-    //     checked: () => {
-    //       if (
-    //         this.mytrees[index].selected &&
-    //         this.mytrees[index].selected == true
-    //       )
-    //         this.mytrees[index].selected = false;
-    //       else this.$set(this.mytrees[index], "selected", true);
-    //     },
-    //     open: () => {
-    //       if (this.mytrees[index].opened) this.mytrees[index].opened = true;
-    //       else this.$set(this.mytrees[index], "opened", true);
-    //     },
-    //     close: () => {
-    //       this.mytrees[index].opened = false;
-    //     },
-    //   };
-    //   return actions;
-    // },
   },
 };
 </script>

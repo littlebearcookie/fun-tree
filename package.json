@@ -1,12 +1,13 @@
 {
   "name": "fun-tree",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A folder tree project by vue",
   "author": "bertonhsu <wl01718290@gmail.com>",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "publish": "node build/publish.js"
   },
   "dependencies": {
     "vue": "^2.5.2"
@@ -46,7 +47,8 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "webpack-shell-plugin": "^0.5.0"
   },
   "engines": {
     "node": ">= 6.0.0",

@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+publish/*
+!publish/package.json
+!publish/yarn.lock
+!publish/.npmignore
 # Editor directories and files
 .idea
 .vscode
