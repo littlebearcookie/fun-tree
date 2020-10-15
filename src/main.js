@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import FunTree from '@/../publish/dist/fun-tree.js'
+import '@/../publish/dist/fun-tree.css'
 Vue.use(FunTree)
 Vue.config.productionTip = false
 

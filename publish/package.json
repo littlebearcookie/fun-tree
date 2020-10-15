@@ -1,6 +1,6 @@
 {
   "name": "fun-tree",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A folder tree project by vue",
   "main": "dist/fun-tree.js",
   "scripts": {
@@ -11,7 +11,10 @@
     "url": "git+https://github.com/littlebearcookie/fun-tree.git"
   },
   "keywords": [
-    "vue"
+    "vue",
+    "js",
+    "tree",
+    "folder"
   ],
   "author": "Berton <wl01718290@gmail.com>",
   "license": "MIT",
