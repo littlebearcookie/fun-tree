@@ -2,7 +2,7 @@
 
 A folder tree project by vue 
 
-**Document**  [English](./README.md)  / [中文(還在寫)](./README-TW.md) 
+**Document**  [English](./README.md)  / [中文](./README-TW.md) 
   
 **DEMO** [Live Demo](https://littlebearcookie.github.io/fun-tree/)
 
