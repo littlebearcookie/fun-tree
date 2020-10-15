@@ -1,15 +1,15 @@
 # **fun-tree**
 
-A folder tree project by vue 
+這是一個用Vue.js開發的資料樹專案。
 
-**Document**  [English](./README.md)  / [中文(還在寫)](./README-TW.md) 
+**Document**  [English](./README.md)  / [中文](./README-TW.md) 
   
-**DEMO** [Live Demo](https://littlebearcookie.github.io/fun-tree/)
+**DEMO** [線上展示](https://littlebearcookie.github.io/fun-tree/)
 
 ## NPM
 `npm install --save fun-tree`
 
-## Import
+## 輸入
 >./main.js
 ```js
 import FunTree from 'fun-tree/dist/fun-tree.js'
@@ -27,9 +27,10 @@ components: {
   FunTree: FunTree,
 },
 ```
-**If you want to customer css, you can not import _fun-tree.css_**
-## Usage
-Add a component inside your template  
+**如果想要用自己的CSS檔案, 就不用輸入 _fun-tree.css_**
+
+## 開始使用
+新增零件到模板  
 **HTML**
 ```html
 <FunTree :trees="yourTreeData"
@@ -67,42 +68,42 @@ export default {
     },
     methods: {
       myEvent(node, actions, values) {
-        console.log(node); // current node vue component
-        console.log(actions); // do actions with current node
-        console.log(values); // current node values  
+        console.log(node); // 當前所選節點的零件資訊
+        console.log(actions); // 針對選選節點進行動作
+        console.log(values); // 當前所選節點得值 
       },
     }
 }
 ```
-## Options
+## 設定
 
-Name            | Type     | Default     | Required | Description
+名稱            | 類型      | 預設值       | 必要      | 簡介
 ----------------|--------- |-------------|----------|--------------
-trees           | Array    | [ ]         | yes      | trees data
-clickEvent      | Function | undefined   | no       | tree's node click event
-checkboxShow    | Boolean  | true        | no       | set it show checkbox
-checkboxAction  | Boolean  | true        | no       | set it checkbox action
+trees           | Array    | [ ]         | yes      | 輸入的數據
+clickEvent      | Function | undefined   | no       | 節點的點擊事件
+checkboxShow    | Boolean  | true        | no       | 設定是否顯示勾選框
+checkboxAction  | Boolean  | true        | no       | 設定勾選框是否有功能
 
-## Event
+## 事件
 >**@clickEvent(node, actions, values)**  
->>**node** : current node vue component  
->>**actions** : do actions with current node  
->>**values** : current node values  
+>>**node** : 當前所選節點的零件資訊  
+>>**actions** : 針對選選節點進行動作  
+>>**values** : 當前所選節點得值  
 
-## Methods in actions
+## actions中提供的方法
 
-Method         | Params             | Description
----------------|------------------  |-----------------------
-addChild       | (object) nodeData  | add child with this node
-removeChildren |                    | remove this node's children
-removeNode     |                    | remove this node
-checked        |                    | set this node's selected true or false
-open           |                    | set this node's opened = true
-close          |                    | set this node's opened = false
+方法           | 參數                | 簡介
+---------------|--------------------|-----------------------
+addChild       | (object) nodeData  | 在此節點新增一個子節點
+removeChildren |                    | 刪除此節點下所有子節點
+removeNode     |                    | 刪除此節點
+checked        |                    | 將此節點設定為勾選
+open           |                    | 展開此節點
+close          |                    | 關閉此節點
 
-## Node data
+## 節點數據
 
-Name            | Type     | Default     | Required | Description
+名稱            | 類型      | 預設值       | 必要      | 簡介
 ----------------|--------- |-------------|----------|--------------
 text            | String   | New Node    | yes      | set node show text
 icon            | String   |             | no       | icon class name
@@ -111,9 +112,9 @@ selected        | Boolean  | false       | no       | set node selected
 disabled        | Boolean  | false       | no       | set node disabled
 children        | Array    | false       | no       | set node children
 
-## Default icon class
+## 預設提供的Icon class
 
-Image                                                                 | Class Name     
+預覽圖片                                                                | Class Name     
 :--------------------------------------------------------------------:|------------
 <img src="./src/assets/folder-closed.svg" width="20" height="20">     | node-icon-closed
 <img src="./src/assets/folder-opened.svg" width="20" height="20">     | node-icon-open
@@ -126,9 +127,9 @@ Image                                                                 | Class Na
 <img src="./src/assets/excel.svg" width="20" height="20">             | node-icon-excel
 <img src="./src/assets/ppt.svg" width="20" height="20">               | node-icon-ppt
 
-## Customer CSS Class 
+## 可客製的 CSS Class 
 
-Class Name            | Description
+Class Name            | 簡介
 ----------------------|----------------------------------------
 tree-node             | Node  
 tree-content          | Node content (checkbox, icon, text).
@@ -141,6 +142,5 @@ tree-checkbox:hover   | Node checkbox hover.
 tree-checkbox-checked | Node checkbox checked.
 tree-word             | Node word.
 
-## License
-
-This is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## 憑證
+這是根據[MIT](http://opensource.org/licenses/MIT)許可的開源軟件

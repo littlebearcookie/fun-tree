@@ -76,7 +76,8 @@ const webpackConfig = merge(baseWebpackConfig, {
         'rm -rf publish/dist/'
       ],
       onBuildEnd: [
-        'cp README.md publish/'
+        'cp README.md publish/',
+        'cp README-TW.md publish/',
       ],
     }),
   ]
