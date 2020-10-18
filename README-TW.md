@@ -9,7 +9,7 @@
 ## NPM
 `npm install --save fun-tree`
 
-## 輸入
+## Import
 >./main.js
 ```js
 import FunTree from 'fun-tree/dist/fun-tree.js'
@@ -105,12 +105,12 @@ close          |                    | 關閉此節點
 
 名稱            | 類型      | 預設值       | 必要      | 簡介
 ----------------|--------- |-------------|----------|--------------
-text            | String   | New Node    | yes      | set node show text
-icon            | String   |             | no       | icon class name
-opened          | Boolean  | false       | no       | set node opened
-selected        | Boolean  | false       | no       | set node selected
-disabled        | Boolean  | false       | no       | set node disabled
-children        | Array    | false       | no       | set node children
+text            | String   | New Node    | yes      | 設定節點的顯示文字
+icon            | String   |             | no       | 設定圖標的Class Name
+opened          | Boolean  | false       | no       | 設定節點是否展開
+selected        | Boolean  | false       | no       | 設定節點是否勾選
+disabled        | Boolean  | false       | no       | 設定節點是否不可操作
+children        | Array    | false       | no       | 設定節點內的子節點內容
 
 ## 預設提供的Icon class
 
@@ -131,16 +131,16 @@ children        | Array    | false       | no       | set node children
 
 Class Name            | 簡介
 ----------------------|----------------------------------------
-tree-node             | Node  
-tree-content          | Node content (checkbox, icon, text).
-tree-content:hover    | Node content hover
-tree-button-unfold    | Node unfold button.
-tree-button-fold      | Node fold button.
-tree-button-none      | Node button none.
-tree-checkbox         | Node checkbox default.
-tree-checkbox:hover   | Node checkbox hover.
-tree-checkbox-checked | Node checkbox checked.
-tree-word             | Node word.
+tree-node             | 節點
+tree-content          | 節點內容 (包含勾選框、圖標、文字)
+tree-content:hover    | 當節點內容被Hover時所使用的css
+tree-button-unfold    | 操縱節點展開的按鈕
+tree-button-fold      | 操縱節點縮起的按鈕
+tree-button-none      | 不顯示操縱節點按鈕的css
+tree-checkbox         | 節點勾選框預設的css
+tree-checkbox:hover   | 節點勾選框被Hover時的css
+tree-checkbox-checked | 節點勾選框被勾選時的css
+tree-word             | 節點中文字的css
 
 ## 憑證
 這是根據[MIT](http://opensource.org/licenses/MIT)許可的開源軟件
