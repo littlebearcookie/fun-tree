@@ -27,7 +27,9 @@ components: {
   FunTree: FunTree,
 },
 ```
-**If you want to customer css, you can not import _fun-tree.css_**
+**If you want to customer css, you can not import _fun-tree.css_**  
+[Example](#Customer-CSS-Class)
+
 ## Usage
 Add a component inside your template  
 **HTML**

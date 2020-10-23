@@ -27,7 +27,8 @@ components: {
   FunTree: FunTree,
 },
 ```
-**如果想要用自己的CSS檔案, 就不用輸入 _fun-tree.css_**
+**如果想要用自己的CSS檔案, 就不用輸入 _fun-tree.css_**  
+[範例](#可客製的-CSS-Class)
 
 ## 開始使用
 新增零件到模板  
